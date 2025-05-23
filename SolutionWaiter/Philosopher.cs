@@ -33,12 +33,12 @@ namespace Lab_4_Csharp
                 table.GetFork(rightFork);
                 table.GetFork(leftFork);
 
+                waiter.ReleasePermission();
+
                 Console.WriteLine($"Philosopher {id} is eating ({i + 1})");
 
                 table.PutFork(rightFork);
                 table.PutFork(leftFork);
-
-                waiter.ReleasePermission();
             }
         }
     }
